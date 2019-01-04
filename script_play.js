@@ -11,7 +11,7 @@ $(document).ready(function(){
     let decodeIAPokemon = JSON.parse(IAPokemon)
     let IAparent = $('.IAPokemonList')
 
-    let damage = 0;
+    let i = 0;
 
 
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 
     $('.movesPokemon').click(function(el){
-
+        console.log(i)
         let screenPlay = $('.screen')  
 
         let attacker = el.target.parentElement.parentElement
@@ -30,6 +30,7 @@ $(document).ready(function(){
             $('.IAPokemonList').click(function(el){
 
                     // vider screen 
+                    i++
 
                     let target = el.target.parentElement
                     let searchPokemon = attacker
@@ -95,8 +96,10 @@ $(document).ready(function(){
                             hp.append("KO !!!!!!")
                         }
                     } 
-  
+                    damage = 0
                 })
+
+
 
     })
 
